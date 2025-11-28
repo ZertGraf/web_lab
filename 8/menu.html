@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Собрать ланч - APEX</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="menu.css">
+</head>
+
+<body>
+    <header>
+        <h1>APEX</h1>
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="menu.html" id="active">Собрать ланч</a>
+            <a href="order.html">Оформить заказ</a>
+            <a href="#footer">Контакты</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="lunch-options-section">
+            <h2>Доступные варианты ланча</h2>
+            <div class="lunch-options-grid">
+                <!-- Option 1 -->
+                <div class="lunch-option">
+                    <div class="lunch-item">
+                        <img src="images/gazpacho.png" alt="Суп">
+                        <span>Суп</span>
+                    </div>
+                    <div class="lunch-item">
+                        <img src="images/vegetable-curry.png" alt="Главное блюдо">
+                        <span>Главное блюдо</span>
+                    </div>
+                    <div class="lunch-item">
+                        <img src="images/greek-salad.png" alt="Салат">
+                        <span>Салат</span>
+                    </div>
+                    <div class="lunch-item">
+                        <img src="images/cappuccino.png" alt="Напиток">
+                        <span>Напиток</span>
+                    </div>
+                </div>
+                <!-- Option 2 -->
+                <div class="lunch-option">
+                    <div class="lunch-item">
+                        <img src="images/gazpacho.png" alt="Суп">
+                        <span>Суп</span>
+                    </div>
+                    <div class="lunch-item">
+                        <img src="images/vegetable-curry.png" alt="Главное блюдо">
+                        <span>Главное блюдо</span>
+                    </div>
+                    <div class="lunch-item">
+                        <img src="images/cappuccino.png" alt="Напиток">
+                        <span>Напиток</span>
+                    </div>
+                </div>
+                <!-- Option 3 -->
+                <div class="lunch-option">
+                    <div class="lunch-item">
+                        <img src="images/gazpacho.png" alt="Суп">
+                        <span>Суп</span>
+                    </div>
+                    <div class="lunch-item">
+                        <img src="images/greek-salad.png" alt="Салат">
+                        <span>Салат</span>
+                    </div>
+                    <div class="lunch-item">
+                        <img src="images/cappuccino.png" alt="Напиток">
+                        <span>Напиток</span>
+                    </div>
+                </div>
+                <!-- Option 4 -->
+                <div class="lunch-option">
+                    <div class="lunch-item">
+                        <img src="images/vegetable-curry.png" alt="Главное блюдо">
+                        <span>Главное блюдо</span>
+                    </div>
+                    <div class="lunch-item">
+                        <img src="images/greek-salad.png" alt="Салат">
+                        <span>Салат</span>
+                    </div>
+                    <div class="lunch-item">
+                        <img src="images/cappuccino.png" alt="Напиток">
+                        <span>Напиток</span>
+                    </div>
+                </div>
+                <!-- Option 5 -->
+                <div class="lunch-option">
+                    <div class="lunch-item">
+                        <img src="images/vegetable-curry.png" alt="Главное блюдо">
+                        <span>Главное блюдо</span>
+                    </div>
+                    <div class="lunch-item">
+                        <img src="images/cappuccino.png" alt="Напиток">
+                        <span>Напиток</span>
+                    </div>
+                </div>
+            </div>
+            <div class="dessert-info">
+                <p>В любой вид ланча можно добавить десерт.</p>
+            </div>
+        </section>
+        <div id="sticky-panel" style="display: none;">
+            <div id="sticky-panel-content">
+                <div>
+                    <p style="margin: 0; font-size: 18px; color: #333;">Стоимость заказа:</p>
+                    <p id="sticky-price" style="margin: 5px 0 0 0;">0 ₽</p>
+                </div>
+                <a href="order.html" id="checkout-link">Перейти к оформлению</a>
+            </div>
+        </div>
+        <section id="soups-section">
+            <h2>Супы</h2>
+            <div class="filters">
+                <button class="filter-button" data-kind="fish">Рыбный</button>
+                <button class="filter-button" data-kind="meat">Мясной</button>
+                <button class="filter-button" data-kind="veg">Вегетарианский</button>
+            </div>
+            <div class="dishes-container" id="soups-container"></div>
+        </section>
+
+        <section id="main-dishes-section">
+            <h2>Главные блюда</h2>
+            <div class="filters">
+                <button class="filter-button" data-kind="fish">Рыбное</button>
+                <button class="filter-button" data-kind="meat">Мясное</button>
+                <button class="filter-button" data-kind="veg">Вегетарианское</button>
+            </div>
+            <div class="dishes-container" id="main-container"></div>
+        </section>
+
+        <section id="salads-section">
+            <h2>Салаты и стартеры</h2>
+            <div class="filters">
+                <button class="filter-button" data-kind="fish">Рыбный</button>
+                <button class="filter-button" data-kind="meat">Мясной</button>
+                <button class="filter-button" data-kind="veg">Вегетарианский</button>
+            </div>
+            <div class="dishes-container" id="salads-container"></div>
+        </section>
+
+        <section id="drinks-section">
+            <h2>Напитки</h2>
+            <div class="filters">
+                <button class="filter-button" data-kind="cold">Холодный</button>
+                <button class="filter-button" data-kind="hot">Горячий</button>
+            </div>
+            <div class="dishes-container" id="drinks-container"></div>
+        </section>
+
+        <section id="desserts-section">
+            <h2>Десерты</h2>
+            <div class="filters">
+                <button class="filter-button" data-kind="small">Маленькая порция</button>
+                <button class="filter-button" data-kind="medium">Средняя порция</button>
+                <button class="filter-button" data-kind="large">Большая порция</button>
+            </div>
+            <div class="dishes-container" id="desserts-container"></div>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <p>Контакты:</p>
+        <p>Телефон: <a href="tel:+74951234567">+7 (495) 123-45-67</a></p>
+        <p>Email: <a href="mailto:info@bizlunch.ru">info@bizlunch.ru</a></p>
+        <p>Адрес: Москва, Кремль, вл1</p>
+    </footer>
+
+
+    <script src="storage.js"></script>
+    <script src="display-dishes.js"></script>
+    <script src="filters.js"></script>
+    <script src="order-handler.js"></script>
+</body>
+
+</html>
